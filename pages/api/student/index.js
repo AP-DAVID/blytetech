@@ -30,15 +30,7 @@ const handler = nextConnect();
 handler.post(async(req, res) =>{
     const {email, phoneNumber,section,  country, region} = req.body
 
-    const transporter = nodemailer.createTransport({
-        host : 'smtp-relay.sendinblue.com',
-        port: 587,
-        secure: false,
-        auth: {
-            user: "blytetech@gmail.com",
-            pass: process.env.PASS,
-        }
-    });
+ 
     
 
     try {
@@ -52,19 +44,19 @@ handler.post(async(req, res) =>{
 
         if(!emailFind){
 
-            const emaill = await transporter.sendMail({
-                from: email,
-                to: "blytetech.gmail.com",
-                subject: `Contact form submission for Student user nigga`,
-                html: `<p>Yo lawrence a new contact form submission</p><br>
-                <p><strong>Email: </strong> ${email}</p><br>
-                <p><strong>Phone: </strong> ${phone}</p><br>
-                <p><strong>Message: </strong> ${message}</p><br>
-                `
+            // const emaill = await transporter.sendMail({
+            //     from: email,
+            //     to: "blytetech.gmail.com",
+            //     subject: `Contact form submission for Student user nigga`,
+            //     html: `<p>Yo lawrence a new contact form submission</p><br>
+            //     <p><strong>Email: </strong> ${email}</p><br>
+            //     <p><strong>Phone: </strong> ${phone}</p><br>
+            //     <p><strong>Message: </strong> ${message}</p><br>
+            //     `
 
-            })
+            // })
 
-            console.log(`Message sent: ${emaill.messageId}`);
+            // console.log(`Message sent: ${emaill.messageId}`);
 
 
                 const newSubscriber = await Student.create(

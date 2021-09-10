@@ -37,9 +37,16 @@ const Forms = ({loading, text}) => {
               'Content-Type' : 'application/json'
         },
         body: JSON.stringify(values)
-    }).then((t) => t.json())
+    }).then((t) =>{
+       t.json()
+       
+      }
+       
+    )
+
 
     console.log(res)
+
 }
 
     
@@ -47,7 +54,7 @@ const Forms = ({loading, text}) => {
   return (
   
     <Formik
-      className="mx-5 sm:mx-0 "
+      
       initialValues={{ email: state.email, phoneNumber: state.phoneNumber, country : state.country, region : state.region,  checked: true }}
       validationSchema={Yup.object({
         email: Yup.string().email("Invalid email address").required("Required"),
@@ -61,7 +68,13 @@ const Forms = ({loading, text}) => {
                     
         
       })}
-      onSubmit={(values) => handledSubmit(values)}
+      onSubmit={async (values) =>{
+         await handledSubmit(values)
+         await resetForm({values: ''})
+        
+        }
+        
+      }
     >
 
       {({
@@ -74,8 +87,8 @@ const Forms = ({loading, text}) => {
         handleSubmit,
         isSubmitting
       }) => (
-        <form onSubmit={handleSubmit}  className="mt-7">
-            <div className="mx-5 sm:mx-0 ">
+        <form onSubmit={handleSubmit} style={{backgroundImage: "url('/exher2.jpg')"}}  className=" mx-6 flex mt-7  bg-gray-500 shadow-md rounded-2xl sm:w-96">
+            <div className="mx-5 sm:mx-0 mt-5">
                 <TextInput
                     type="email"
                     name="email"
@@ -98,19 +111,23 @@ const Forms = ({loading, text}) => {
                     success={!errors.phoneNumber && touched.phoneNumber ? "Valid" : ""}
                 />
               
-              <div className="flex items-center align-middle ">
+              <div className="flex flex-col sm:w-7 md:flex-row md:space-x-2">
                 <CountryDropdown
                     style={{
                         backgroundColor: 'grey',
                         border: "1px solid #ffff",
                         color: 'white',
                         borderRadius : 10,
+                        marginBottom : "8px",
                         fontSize: 15,
                         height : 40,
-                        width : "200px"
+                        width : "13rem"
+
+                        
                     }}
                     tabIndex={1000}
                     value={values.country}
+                    className="w-52"
                     id="my-country-field-id"
                     name="country"
                     classes="my-custom-class second-class"
@@ -122,16 +139,20 @@ const Forms = ({loading, text}) => {
                         backgroundColor: 'grey',
                         border: "1px solid #ffff",
                         color: 'white',
-                        marginTop : "8px",
-                        marginLeft : "5px",
+                        
                         borderRadius : 10,
                         fontSize: 15,
                         height : 40,
-                        width : "150px"
+                        
+                        width : "9rem"
+                        
+                        
+                        
                     }}
                     country={values.country}
                     value={values.region}
                     name="region"
+                    className="w-52"
                     id="my-region-field-id"
                     classes="another-custom-class"
                     onChange={(_, e) => handleChange(e)}
@@ -148,6 +169,9 @@ const Forms = ({loading, text}) => {
                     color="lightBlue"
                     ripple="light"
                     disabled={isSubmitting}
+                    className=" transition
+                    cursor-pointer
+                    duration-200 transform ease-in hover:scale-105 hover:animate-pulse"
                 >
                     Get early access
                 </Button>
@@ -161,8 +185,11 @@ const Forms = ({loading, text}) => {
                             color="brown"
                             ripple="light"
                             disabled={isSubmitting}
+                            className=" transition
+                            cursor-pointer
+                            duration-200 transform ease-in hover:scale-105 hover:animate-pulse"
                         >
-                            Or Subscribe as a source user
+                            Or Subscribe as a student's user
                         </Button>
 
                         </div>
@@ -172,12 +199,15 @@ const Forms = ({loading, text}) => {
                         
                         <Button
                             type="button"
+                            className="w-52  transition
+                            cursor-pointer
+                            duration-200 transform ease-in hover:scale-105 hover:animate-pulse"
                             onClick={() => Router.push("/source_user")}
                             color="brown"
                             ripple="light"
                             disabled={isSubmitting}
                         >
-                            Or Subscribe as a Student user
+                            Or Subscribe as a Source user
                         </Button>
 
                         </div>

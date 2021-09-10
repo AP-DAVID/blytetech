@@ -17,7 +17,7 @@ export default function Home() {
 
   const [loading, setLoading] = useState(false)
   return (
-    <div style={{backgroundColor : "black"}} className="flex flex-col overflow-y-scroll justify-between h-screen bg-hero-pattern bg-cover bg-center bg-no-repeat">
+    <div style={{backgroundColor : "black"}} className="overflow-y-scroll overflow-hidden  h-screen bg-hero-pattern bg-cover bg-center bg-no-repeat">
  
 
     

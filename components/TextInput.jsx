@@ -3,10 +3,11 @@ import Input from "@material-tailwind/react/Input";
 
 const TextInput = (props) => {
   return (
-    <div className="bg-gray-700" style={{ marginBottom: "20px", width: "260px", borderRadius: 10}}>
+    <div className="bg-gray-700 w-52 flex-grow" style={{ marginBottom: "20px",   borderRadius: 10}}>
       <Input
         {...props}
-        className="bg-gray-700"
+        className="bg-gray-700 "
+        style={{color : "white"}}
         color="lightBlue"
         size="regular"
         outline={true}

@@ -1,6 +1,7 @@
 import ConnectToDatabase from "../../../backend/server"
 import Source from "../../../models/Sourceuser";
 import nextConnect from "next-connect"
+import nodemailer from 'nodemailer'
 
 
 ConnectToDatabase();
@@ -28,6 +29,17 @@ const handler = nextConnect();
 
 handler.post(async(req, res) =>{
     const {email, phoneNumber, section, country, region} = req.body
+
+
+    // const transporter = nodemailer.createTransport({
+    //     host : 'smtp-relay.sendinblue.com',
+    //     port: 587,
+    //     secure: false,
+    //     auth: {
+    //         user: "blytetech@gmail.com",
+    //         pass: `${process.env.PASS}`,
+    //     }
+    // });
     
 
     try {
@@ -40,6 +52,20 @@ handler.post(async(req, res) =>{
 
 
         if(!emailFind){
+
+            //    const emaill = await transporter.sendMail({
+            //        from: email,
+            //        to: "blytetech@gmail.com",
+            //        subject: `Contact form submission for source user nigga ${email}`,
+            //        html: `<p>Yo lawrence a new contact form submission</p><br>
+            //        <p><strong>Email: </strong> ${email}</p><br>
+            //        <p><strong>Phone: </strong> ${phoneNumber}</p><br>
+            //        <p><strong>Message: </strong> source user nigga</p><br>
+            //        `
+
+            //    })
+
+            //    console.log(`Message sent: ${emaill.messageId}`);
 
                 const newSubscriber = await Source.create(
                     { 

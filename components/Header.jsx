@@ -16,9 +16,9 @@ function Header() {
                 <AcademicCapIcon className="h-8 mb-1 group-hover:animate-bounce" />
                 <h1 className="text-3xl font-bold">Exher</h1>
 
-                <button onClick={() => Router.push("/about")} type="button" className="bg-blue-400 hover:bg-green-700 mx-5 text-black font-bold py-2 px-4 rounded">
-                    About
-                </button>
+                <a href="/" className="bg-blue-400 hover:bg-green-700 mx-5 text-black font-bold py-2 px-4 rounded">
+                    Home
+                </a>
           </div>
         </div>
     )

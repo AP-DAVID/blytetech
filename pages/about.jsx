@@ -27,10 +27,10 @@ export default function about() {
                 animate="visible"
                 exit="exit"
             >
-				<h1 className="text-3xl md:text-5xl text-yellow-300 tracking-loose">Help</h1>
-				<h2 className="text-3xl md:text-5xl leading-relaxed text-gray-50 md:leading-snug mb-2">The Musco Team
+				<h1 className="text-3xl md:text-5xl text-yellow-300 tracking-loose">About</h1>
+				<h2 className="text-3xl md:text-5xl leading-relaxed text-gray-50 md:leading-snug mb-2">The Blyte Team
 				</h2>
-				<p className="text-2x1 md:text-base text-gray-50 mb-4">The Exher help form will be available soon, stay tuned ;)</p>
+				<p className="text-2x1 md:text-base text-gray-50 mb-4 break-words">The Blyte team is currently made up of babcock graduates ranging from computer science, software engineering, and political science</p>
 
 				   <Link href="/" 
                     >

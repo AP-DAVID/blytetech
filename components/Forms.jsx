@@ -181,7 +181,7 @@ const Forms = ({loading, text}) => {
                         
                         <Button
                             type="button"
-                            onClick={() => Router.push("/")}
+                            onClick={() => Router.push("/subscribe")}
                             color="brown"
                             ripple="light"
                             disabled={isSubmitting}

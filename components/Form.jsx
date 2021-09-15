@@ -12,20 +12,8 @@ function Form() {
                     <p className="leading-relaxed mt-1 mb-4 text-gray-600">
                       Complete this form and we will get back to you in 24 hours.
                     </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Full Name"
-                        style={{ transition: "all .15s ease" }}
-                      />
-                    </div>
+
+
 
                     <div className="relative w-full mb-3">
                       <label
@@ -38,6 +26,22 @@ function Form() {
                         type="email"
                         className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                         placeholder="Email"
+                        style={{ transition: "all .15s ease" }}
+                      />
+                    </div>
+
+
+                    <div className="relative w-full mb-3 mt-8">
+                      <label
+                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        htmlFor="full-name"
+                      >
+                        Subject
+                      </label>
+                      <input
+                        type="text"
+                        className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                        placeholder="Enter Subject"
                         style={{ transition: "all .15s ease" }}
                       />
                     </div>

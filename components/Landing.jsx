@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Form from "./Form";
 import Project from "./Project";
 import {TrendingUpIcon, CurrencyRupeeIcon, SupportIcon} from "@heroicons/react/solid"
+import {ChevronDoubleDownIcon} from '@heroicons/react/solid'
 
 
 
@@ -29,7 +30,7 @@ export default function Landing() {
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-12">
                     <h1 className="text-white font-semibold text-5xl">
-                       Let's Create an application for you!.
+                       About Us
                     </h1>
                     <p className="mt-4 text-lg text-gray-300">
                       Blyte tech is a nigerian tech company working towards proving that a profitable tech multinational corporation can be built from nigeria
@@ -53,27 +54,40 @@ export default function Landing() {
               
               
             </div>
+           
+           
 
-
-            <div className="flex flex-wrap items-center mt-32">
+            <div className="flex flex-wrap items-center mt-64">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                  <h1 className="text-black font-bold text-5xl">Our services</h1>
                 <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
                   <TrendingUpIcon className=" text-xl"/>
                 </div>
-                <h3 className="text-3xl mb-2 text-black font-semibold leading-normal">
-                  Working with us is a pleasure
-                </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                    We can build that web application you have always desired to acquire
-                </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                  Why not contact us today and get it built in less than 2 weeks!!. <br/>
-                  with our ever efficient team, you are promised a job well done 
-                </p>
-                
+
+               
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+             
+
+            </div>
+          </div>
+        </section>
+
+
+
+        <section className="pb-20 bg-gray-300 -mt-32">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap">
+              
+              
+            </div>
+
+
+            <div className="flex flex-wrap items-center mt-32">
+
+
+
+            <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-blue-600">
                   <img
                     alt="..."
@@ -103,37 +117,10 @@ export default function Landing() {
                 </div>
               </div>
 
-            </div>
-          </div>
-        </section>
 
 
 
-        <section className="pb-20 bg-gray-100 -mt-24">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap">
               
-              
-            </div>
-
-
-            <div className="flex flex-wrap items-center mt-32">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-                  < CurrencyRupeeIcon className=" text-xl"/>
-                </div>
-                <h3 className="text-3xl text-black mb-2 font-semibold leading-normal">
-                  Work with us
-                </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                    We can build that mobile application you have always desired to acquire
-                </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                  Why not contact us today and get it built in less than 2 weeks!!. <br/>
-                  with our ever efficient and time managing team, you are promised a job well done 
-                </p>
-                
-              </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-blue-600">
@@ -165,6 +152,40 @@ export default function Landing() {
                 </div>
               </div>
 
+
+
+
+            </div>
+          </div>
+        </section>
+
+        <section className="pt-20 pb-48">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center text-center mb-12">
+              <div className="w-full lg:w-6/12 px-4">
+                <h2 className="text-4xl text-black font-semibold">
+                  Portfolio<br/> <span className="text-gray-600 font-medium text-xl">Below are Products we have built</span>
+                </h2>
+               
+                
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                
+               <h1 className="text-gray-600 font-medium text-2xl">Exher</h1>
+                 <Project />
+                 <div className="flex justify-between ml-3 mr-2">
+
+                      <Link href="/subscribe" ><h1 className="text-black text-base font-bold cursor-pointer">Register as source or student's User now</h1></Link>
+
+                 </div>
+
+
+              </div>
+             
+             
+             
             </div>
           </div>
         </section>
@@ -193,12 +214,12 @@ export default function Landing() {
                   <h3 className="text-3xl text-black font-semibold">
                     A growing company that gets shit done
                   </h3>
-                  <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                    There is no time to waste time, Contact us now!! via the form below
+                  <p className="mt-4 mb-6 text-lg leading-relaxed text-gray-600">
+                    You can contact us via the form below
                   </p>
-                  <h1 className="mt-8 mb-3 font-bold text-black">
-                    Contact Us and make this panda happy
-                  </h1>
+
+                  <ChevronDoubleDownIcon className="h-10 w-10 text-blue-500  " />
+                  
 
                   <img src="/panda.gif" className="h-72 rounded-xl w-72"/>
                 </div>
@@ -208,36 +229,7 @@ export default function Landing() {
         </section>
 
 
-        <section className="pt-20 pb-48">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center text-center mb-24">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl text-black font-semibold">
-                  Ungoing Project
-                </h2>
-               
-                
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-center">
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                
-
-                 <Project />
-                 <div className="flex justify-between ml-3 mr-2">
-
-                      <Link href="/subscribe" ><h1 className="text-black text-base font-bold cursor-pointer">Register as source or student's User now</h1></Link>
-
-                 </div>
-
-
-              </div>
-             
-             
-             
-            </div>
-          </div>
-        </section>
+      
 
         <section className="pb-20 relative block bg-gray-900">
           <div

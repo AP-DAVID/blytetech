@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image"
 
+
+
 export default function Footer() {
   return (
     <footer className="relative bg-gray-300 pt-8 pb-6">
@@ -35,21 +37,30 @@ export default function Footer() {
                 className=" text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <Image src="/twitter.svg" height={80} width={100} className="flex"/>
+                <Image src="/twitter.svg" height={150} width={100} className="flex"/>
               </button>
               <button
                 className=" text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <Image src="/facebook.svg" height={80} width={100} className="flex"/>
+                <Image src="/facebook.svg" height={150} width={100} className="flex"/>
               </button>
               
               <button
                 className=" text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <Image src="/instagram.svg" height={80} width={100} className="flex"/>
+                <Image src="/instagram.svg" height={150} width={100} className="flex"/>
               </button>
+
+
+              <button
+                className=" text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button"
+              >
+                <Image src="/gmail.svg" height={150} width={100} className="flex"/>
+              </button>
+
             </div>
           </div>
           <div className="w-full lg:w-6/12 px-4">

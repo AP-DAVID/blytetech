@@ -15,9 +15,9 @@ export default function Landing() {
     <>
       <Navbar transparent />
       <main>
-        <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
+        <div className="relative  pt-16 pb-32 flex content-center items-center justify-center"
             style={{
-              minHeight: "75vh"
+              minHeight: "80vh"
             }}>
           <div className="absolute top-0 w-full h-full bg-center bg-cover"
               style={{

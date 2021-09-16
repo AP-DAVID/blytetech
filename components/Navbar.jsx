@@ -27,7 +27,7 @@ export default function Navbar(props) {
             }
            
           >
-            Blyte tech
+            Blyte Tech
           </h1>
           
           </div>

@@ -30,10 +30,10 @@ export default function Landing() {
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-12">
                     <h1 className="text-white font-semibold text-5xl">
-                       About Us
+                       Goal
                     </h1>
                     <p className="mt-4 text-lg text-gray-300">
-                      Blyte tech is a nigerian tech company working towards proving that a profitable tech multinational corporation can be built from nigeria
+                     Blyte tech is a nigerian tech company made of smart talented individuals working towards proving to themselves that they can build a profitable tech multinational corporation.
                     </p>
                   </div>
                 </div>

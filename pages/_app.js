@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import 'suneditor/dist/css/suneditor.min.css';
 
 import { AnimatePresence, motion } from 'framer-motion'
 

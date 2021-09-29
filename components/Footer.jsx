@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gray-300 pt-8 pb-6">
+    <footer className="relative bg-gray-100 pt-8 pb-6">
       <div
         className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
         style={{ height: "80px" }}
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-6/12 px-4">
-            <h4 className="text-3xl font-semibold">
+            <h4 className="text-3xl text-black font-semibold">
               Let's keep in touch!
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-700">

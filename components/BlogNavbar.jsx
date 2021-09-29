@@ -1,6 +1,7 @@
 import React from "react";
 import {MenuIcon} from "@heroicons/react/solid"
 import Image from 'next/image'
+import Router from 'next/router'
 
 export default function BlogNavbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -96,7 +97,7 @@ export default function BlogNavbar(props) {
                     " fab fa-twitter text-lg leading-lg "
                   }
                 />
-                <span className=" inline-block ml-2">Username</span>
+                <span onClick={() => Router.push("/Blog/blogpost")} className=" inline-block ml-2">Add blog</span>
                 <span className="lg:hidden inline-block ml-2">Twitter</span>
               </a>
             </li>
